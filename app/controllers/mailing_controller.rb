@@ -2,7 +2,7 @@ class MailingController < ApplicationController
 
   def send_default
     UbiMailer.default_email(email_params).deliver_now
-    response.headers['Access-Control-Allow-Origin'] = 'https://jordanfarnworth.github.io/ubiquitous-consulting/'
+    response.headers['Access-Control-Allow-Origin'] = 'https://jordanfarnworth.github.io'
     render json: {success: "email will be delivered"}, status: :ok
   end
 
