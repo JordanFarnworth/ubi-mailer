@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>New email from: <%=@mail_info.source%></h1>
+    <h3>Info:</h3>
+    <legend></legend>
+    <h4>Name: <%=@mail_info.name_given%></h4>
+    <h4>Email: <%=@mail_info.email_given%></h4>
+    <h4>Phone Number: <%=@mail_info.phone_number_given%></h4>
+    <br>
+    <br>
+    <h5>
+      Message:
+    </h5>
+    <br>
+    <p>
+      <%=@mail_info.message%>
+    </p>
+
+    <p>
+      sent at: <%=Time.zone.now%>
+    </p>
+  </body>
+</html>
